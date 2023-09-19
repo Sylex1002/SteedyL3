@@ -1,0 +1,15 @@
+.focusMurEtudiant{
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 85%;
+    &::-webkit-scrollbar {
+        width: 2px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #afafaf;
+    }
+}

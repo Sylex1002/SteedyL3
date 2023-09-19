@@ -1,0 +1,136 @@
+.drawer {
+    // background: yellow;
+    position: relative;
+    transition: ease 0.3s !important;
+
+    .btnOpenClose {
+        height: 40px;
+        border-bottom: 1px solid #f3f0ee;
+    }
+
+    .disconnect {
+        position: absolute;
+        bottom: 0;
+        height: 35px;
+        width: 100%;
+        border: 1px solid #afafaf;
+        color: #afafaf;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 8px;
+        font-size: 14px;
+
+        &:hover {
+            background: #afafaf34;
+            color: #000;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .deconnectLink {
+                font-size: 12px;
+                text-align: center;
+                transition: ease 0.4s;
+            }
+
+            &:hover {
+                background: none;
+                color: #000;
+            }
+        }
+    }
+
+    .listMenu {
+        p {
+            font-size: 14px;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            min-height: 35px;
+            max-height: 35px;
+            margin-top: 8px;
+            border-radius: 8px;
+            color: var(--black);
+            cursor: pointer;
+            transition: ease 0.4s;
+
+            .icon {
+                flex: 1;
+                font-size: 14px;
+                transition: ease 0.4s;
+            }
+
+            .nameLink {
+                flex: 3;
+                transition: ease 0.4s;
+            }
+
+            &:hover {
+                background: #f48f302f;
+                color: #f49030;
+            }
+        }
+    }
+
+    .drawerBtn {
+        display: flex;
+        align-items: center;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        font-size: 14px;
+        width: 100%;
+        border-radius: 8px;
+        color: var(--black);
+
+        &:hover {
+            background: var(--bg1);
+            color: var(--bg);
+        }
+    }
+}
+
+.active {
+    background: var(--bg1);
+    color: var(--bg);
+    border-radius: 8px;
+}
+
+#DraawerWrite,
+#DraawerLogo {
+    display: grid;
+    grid-template-rows: 1fr 30px;
+    grid-template-columns: 1fr;
+    height: 100%;
+
+    .list_button {
+        display: flex;
+        place-self: end;
+        align-self: flex-end;
+        border-bottom: var(--grey);
+
+        .dropDrawer {
+            border: none;
+            background: #FFF;
+            cursor: pointer;
+            transition: all .4s;
+
+            // &:hover {
+            //     background-color: #f2f2f2;
+            // }
+        }
+    }
+}
+
+.drawer_content {
+    padding-inline: 5px;
+    overflow: hidden;
+    transition: ease 0.3s !important;
+    background: #FFF;
+}

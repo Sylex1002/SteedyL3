@@ -1,0 +1,349 @@
+#FocusLire {
+    height: 100vh;
+    overflow: hidden;
+    max-width: 100vw;
+    .FocusLire_container {
+        display: grid;
+        grid-template-rows: 8vh 82vh 10vh;
+        grid-template-columns: 1fr;
+        .FocusLire_content {
+            display: grid;
+            grid-template-rows: 1fr 165px;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                background: #0000005d;
+                backdrop-filter: blur(5px);
+            }
+        }
+    }
+}
+
+// focus header
+#FocusBanner {
+    padding: 0px 15px;
+    .FocusBanner_content {
+        display: grid;
+        grid-template-columns: 500px 1fr ;
+
+        .FocusBanner_left {
+            z-index: 999 !important;
+
+            .FocusBanner_top_vide {
+                height: 50px;
+            }
+
+            .FocusBanner_header {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                z-index: 999 !important;
+
+                .FocusBanner_header_left {
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 5px;
+                        object-fit: cover;
+                    }
+                }
+
+                .FocusBanner_header_right {
+                    h4 {
+                        color: white;
+                        z-index: 999 !important;
+                    }
+
+                    p {
+                        color: white;
+                        font-size: 13px;
+                        z-index: 999 !important;
+                    }
+
+                }
+            }
+
+            .FocusBanner_title {
+                margin-top: 25px;
+                z-index: 999 !important;
+
+                h2 {
+                    color: white;
+                }
+            }
+
+            .FocusBanner_dec {
+                z-index: 999 !important;
+                margin-top: 25px;
+                p {
+                    color: white;
+                }
+            }
+
+            .FocusBanner_btns {
+                margin-top: 20px;
+                color: white;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 20px;  
+
+                .FocusBanner_btn_card {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+
+                    .FocusBanner_btn_icons {
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 7px;
+                        // height: 30px;
+                        // width: 30px;
+                        background-color: var(--black1);
+                        border-radius: 50%;
+
+                        .FocusBanner_btn_icon {
+                            font-size: 17px;
+                            cursor: pointer;
+                        }
+                    }
+
+                    span {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.FocusLire_vide {
+    min-height: 50px;
+    width: 100%;
+}
+
+.FocusBanner_category_list {
+    max-width: 100vw;
+    justify-content: flex-start;
+    padding-top: 15px;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+    .swiper_category {
+        margin-bottom: 10px;
+    }
+
+    .swiper-slide {
+        flex-shrink: 100 !important;
+    }
+}
+
+#WaveAudio {
+    display: flex;
+    align-items: center;
+    background: #3333339a;
+    border-radius: 5px;
+    margin-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 4px;
+    padding-bottom: 1px;
+
+    .WaveAudio_pause {
+        .WaveAudio_pause_icon {
+            cursor: pointer;
+            font-size: 30px;
+            color: white;
+        }
+    }
+
+    #waveform {
+        width: 100%;
+    }
+}
+
+#FooterFocusLire {
+    background-color: var(--white);
+    color: #333;
+    position: relative;
+    
+    .FooterFocusLire_content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .FooterFocusLire_left {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 12px;
+
+            .FooterFocusLire_left_img {
+                height: 70px;
+                width: 50px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .FooterFocusLire_left_dec {
+                width: 200px;
+
+                h4 {
+                    font-weight: bold;
+                }
+
+                span {
+                    margin-top: 5px;
+                    font-size: 14px;
+                    color: grey;
+                }
+            }
+        }
+
+        .FooterFocusLire_center {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            .FooterFocusLire_icon_pause {
+                font-size: 45px;
+                color: black;
+                cursor: pointer;
+                &:hover{
+                color:var(--bg);
+                }
+            }
+
+            .FooterFocusLire_center_card {
+                .FooterFocusLire_icon {
+                    font-size: 23px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .FooterFocusLire_right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            .FooterFocusLire_center_card {
+                .FooterFocusLire_icon {
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+            }
+
+            .FooterFocusLire_volume {
+                display: flex;
+                align-items: center;
+                margin-right: 25px;
+                margin-left: 25px;
+                gap: 8px;
+
+                .FooterFocusLire_volume_icon {
+                    cursor: pointer;
+                }
+
+                #FooterFocusLire_volume_input {
+                    font-size: 10px;
+
+                }
+
+            }
+
+            .FooterFocusLire_cancel_icon {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+
+#swiperBroke_1 {
+    width: 100vw;
+}
+
+.FooterFocusLire_icon {
+    &:hover {
+        
+        color: var(--bg);
+    }
+}
+
+.like_active {
+    color: var(--bg);
+    cursor: pointer;
+
+    &:hover {
+        color: #c9c7c7;
+    }
+}
+
+.unlike_active {
+    cursor: pointer;
+
+    &:hover {
+        color: var(--bg);
+    }
+}
+
+.active_aleatoire {
+    cursor: pointer;
+    color: var(--bg);
+
+    &:hover {
+        color: #c9c7c7;
+    }
+}
+
+.Unactive_aleatoire {
+    cursor: pointer;
+
+    &:hover {
+        color: var(--bg);
+    }
+}
+.FooterFocusLire_ligne{
+    height: 5px;
+    display: flex;
+    align-items: flex-start;
+    #FooterFocusLire_ligne_progres{
+        border-radius: 0px;
+        background: var(--bg);
+        border: none;
+        height: 5px;
+        
+    }
+}
+progress::-moz-progress-bar {
+    background: var(--bg);
+    height: 5px;
+
+}
+progress::-webkit-progress-value {
+    background: var(--bg);
+    height: 5px;
+}
+progress {
+    color: var(--bg);
+    height: 5px;
+
+}
+.FocusLire_content_footer{
+    position: relative;
+}

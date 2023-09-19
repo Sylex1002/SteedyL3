@@ -1,0 +1,62 @@
+#CardProfUnFollow {
+    .createur-default {
+        width: 296px;
+        display: flex;
+        justify-content: center;
+        background: #FFF;
+        border-radius: 12px;
+        padding: 24px;
+
+        .profil {
+            width: 120px;
+            height: 120px;
+            border-radius: 50% !important;
+            overflow: hidden;
+            text-align: center;
+            align-self: center;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .info-name {
+            width: 100%;
+            font-size: 16px;
+            font-weight: 600;
+
+            p {
+                display: flex;
+                justify-content: center;
+            }
+
+            .tag {
+                font-size: 14px;
+                font-weight: 100;
+                 min-height: 20px;
+
+            }
+        }
+
+        .follow {
+            width: 100%;
+            display: block;
+            min-height: 20px;
+            button {
+                border: 1px solid var(--bg);
+                outline: none;
+                background: var(--bg1);
+                border-radius: 8px;
+                width: 100%;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--bg);
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+    }
+}

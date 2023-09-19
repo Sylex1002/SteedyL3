@@ -1,0 +1,174 @@
+.membres-modal {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background: #1f231f4b;
+    backdrop-filter: blur(3px);
+    overflow-y: hidden;
+
+    .modal-content {
+        width: 60%;
+        height: 80%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        border-radius: 8px;
+        position: relative;
+        padding: 12px 24px;
+
+        .modal-head {
+            position: relative;
+            height: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .button-close {
+                position: absolute;
+                right: 0;
+                top: 10px;
+                justify-content: flex-end;
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+
+            .titre {
+                font-size: 16px;
+            }
+        }
+
+        .search-bar {
+            position: relative;
+            height: 10%;
+            display: inline-flex;
+            flex-direction: row;
+
+            .box-search {
+                width: 90%;
+                height: 100%;
+                display: inline-flex;
+                flex-direction: row;
+                background-color: var(--grey);
+                border-radius: 8px;
+                overflow: hidden;
+
+                .search-icon {
+                    width: 10%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                input {
+                    width: 100%;
+                    height: 100%;
+                    outline: none;
+                    background: transparent;
+                    border: none;
+                }
+            }
+
+            .add-members {
+                width: 10%;
+                height: 100%;
+                border: none;
+                background: none;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                .add-icon {
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 25px;
+                    color: #848484;
+                    cursor: pointer;
+                    transition: .3s ease-in-out;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .users {
+            height: 80%;
+            overflow-y: scroll;
+            scrollbar-width: none;
+
+            .card-user {
+                width: 100%;
+                cursor: pointer;
+                height: 55px;
+                display: flex;
+                align-items: center;
+                border-radius: 4px;
+                transition: ease 0.3s;
+
+                &:hover{
+                    background: #cecece23;
+                }
+
+                .list-members {
+                    display: flex;
+                    align-items: center;
+
+                    .image-profil {
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 4px;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .user {
+                        display: inline-flex;
+                        flex-direction: column;
+
+                        span {
+                            height: 50%;
+                            display: flex;
+                            align-items: flex-start;
+                            font-weight: bold;
+                            color: black;
+                        }
+
+                        p {
+                            height: 50%;
+                            display: flex;
+                            align-items: flex-end;
+                            color: #9b9b9b;
+                            font-size: small;
+                        }
+                    }
+                }
+            }
+
+            &::-webkit-scrollbar {
+                width: 2px;
+                background-color: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #afafaf;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background-color: transparent;
+            }
+        }
+    }
+}

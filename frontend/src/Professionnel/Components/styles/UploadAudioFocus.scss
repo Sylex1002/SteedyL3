@@ -1,0 +1,126 @@
+.uploadAudioFocus {
+    width: 100%;
+    height: 100%;
+    background: var(--grey);
+
+    .droping {
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .cardAudio {
+            width: 25vw;
+            height: 80vh;
+            border-radius: 12px;
+            background: #ffffff5e;
+            backdrop-filter: blur(5px);
+
+            .circle-drop {
+                height: 80%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .drop-zone {
+                    position: relative;
+                    width: 264px;
+                    height: 264px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 3px solid var(--bg);
+                    border-radius: 50% !important;
+                    overflow: hidden;
+                    box-shadow: 1px 0px 239px -53px rgba(244, 144, 48, 0.83);
+                    -webkit-box-shadow: 1px 0px 239px -53px rgba(244, 144, 48, 0.83);
+                    -moz-box-shadow: 1px 0px 239px -53px rgba(244, 144, 48, 0.83);
+                    cursor: pointer;
+
+                    p {
+                        transition: ease 0.4s;
+                    }
+
+                    &:hover {
+                        .p {
+                            z-index: 999 !important;
+                            background: #2525252f;
+                            font-size: 24px;
+                            font-weight: 700;
+                            color: #FFF;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+
+                    .loader {
+                        position: absolute;
+                        inset: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        .paused {
+                            width: 80px;
+                            border: 3px dashed var(--bg);
+                        }
+                    }
+                }
+
+                .time {
+                    width: 100%;
+                    padding: 24px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .audio {
+                border-radius: 8px;
+                height: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 24px;
+
+                .controlBtn {
+                    width: 176px;
+                    height: 80px;
+                    background: #0000003D;
+                    padding: 8px, 14px, 8px, 14px;
+                    border-radius: 14px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .stop{
+                        background: none;
+                        border: none;
+                        cursor: pointer;
+                    }
+
+                    .play {
+                        width: 53px;
+                        height: 53px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50% !important;
+                        background: #FFF;
+                        outline: none;
+                        border: 1px solid #FFF;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

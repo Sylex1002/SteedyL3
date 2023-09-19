@@ -1,0 +1,63 @@
+.fichier{
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    border-radius: 10px 10px 0 0;
+    background-color: black;
+    width: 100%;
+}
+.description{
+    background-color: #fff;
+    width: 100%;
+    height: min(90px);
+    border: none;
+    border-radius: 0 0 10px 10px;
+    padding-bottom: 10px;
+    .nom-fichier {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 5px;
+        
+        p{
+            color: #1f1f1f;
+            margin-left: 20px;
+            font-size: 13px;
+            word-break: break-all;
+        }
+    }
+    .button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        button{
+            background-color: #9b9b9b;
+            width: 40%;
+            height: 35px;
+            border: none;
+            border-radius: 5px;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: .3s ease-in-out;
+
+        }
+        .voir{
+            &:hover {
+                background-color: #35364a;
+                color: #f49030;
+                transform: scale(0.99);
+            }
+        }
+        .telecharger {
+            &:hover {
+                background-color: #333;
+                color: #f49030;
+                transform: scale(0.99);
+            }
+        }
+    }
+}

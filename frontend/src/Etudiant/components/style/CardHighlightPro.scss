@@ -1,0 +1,47 @@
+.cardHighlightPro {
+
+    // flex: 1 0 250px;
+    position: relative;
+    height: 45vh;
+    min-width: 17.7vw;
+    border-radius: 8px;
+    color: #5f5c5c;
+    cursor: pointer;
+    background: #25252518;
+    backdrop-filter: blur(1px);
+
+    &:hover {
+        backdrop-filter: none;
+    }
+
+    .cardHighlightPro_content {
+        position: relative;
+    }
+
+    .cardHighlightPro_views {
+        color: #FFF;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        position: absolute;
+        top: 0;
+
+        p {
+            font-weight: 700;
+        }
+    }
+}
+
+.cardHighlightPro_video video {
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+
+.cardHighlightPro_img {
+    height: 45vh;
+    min-width: 17.7vw;
+    border-radius: 8px;
+    object-fit: cover;
+}

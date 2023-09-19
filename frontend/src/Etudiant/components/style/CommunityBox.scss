@@ -1,0 +1,44 @@
+.community {
+    background: var(--white);
+    padding: 12px 0;
+    margin-bottom: 12px;
+    border-radius: 8px;
+
+    .title {
+        padding: 0 10px;
+    }
+
+    .card {
+        padding: 0 10px;
+        height: 40px;
+
+        .image {
+            // border: 1px solid;
+            width: 40px;
+            height: 40px;
+            border-radius: 5px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .view{
+        padding: 12px;
+        .viewBtn{
+            border: 1px solid #afafaf;
+            height: 40px;
+            border-radius: 8px;
+            background: none;
+            color: #000;
+            font-size: 12px;
+            font-weight: 700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

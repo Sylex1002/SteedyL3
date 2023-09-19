@@ -1,0 +1,27 @@
+.createurs {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    .tabMenu {
+        height: 10%;
+    }
+    overflow-y: auto;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar{
+        width: 2px !important;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: #afafaf;
+    }
+
+    .showing {
+        .Createurs_liste {
+            height: 100%;
+           
+            padding: 12px 0;
+        }
+    }
+}

@@ -1,0 +1,121 @@
+.confirmation{
+    height: 100vh;
+    background-color: var(--white);
+    color:var(--dark);
+    .form_confirmation {
+        max-height: 90vh;
+        display: flex;
+        justify-content: space-between;
+        .forms {
+            padding: 5px 15px;
+            width: 600px;
+            .forme{
+                border: 1px solid #2525251f;
+                border-radius: 10px;
+                height: 85vh;
+                .title {
+                    margin-top: 10px;
+                    font-weight: 600;
+                    font-size: 20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+                .form-input{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 100%;
+                    form {
+                        padding: 5px 20px;
+                        // height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        
+        
+                        .input{
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+    
+                            .input_otp{
+                                display: flex;
+                                justify-content: space-between;
+                                width: 100%;
+                                input{
+                                    width: 70px;
+                                    height: 50px;
+                                    font-size: 20px;
+                                    padding: 10px;
+                                    text-align: center;
+                                    border-radius: 5px;
+                                    margin: 2px;
+                                    border: 1px solid #AFAFAF;
+                                }
+                            }
+        
+                        }
+                    }
+                    .btn{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        .btn_continuer {
+                            margin-top: 15px;
+                            background: #f49030;
+                            border: 1px solid #f49030;
+                            width: 92%;
+                            padding: 10px;
+                            border-radius: 5px;
+                            color: #FFF;
+                            font-size: 15px;
+                            font-weight: 600;
+                            cursor: pointer;
+                        }
+                        .btn_continuer_disable{
+                            margin-top: 15px;
+                            background: #AFAFAF;
+                            border: 1px solid #AFAFAF;
+                            width: 92%;
+                            padding: 10px;
+                            border-radius: 5px;
+                            color: #FFF;
+                            font-size: 15px;
+                            font-weight: 600;
+                        }
+                        .btn_resend {
+                            margin-top: 5px;
+                            border: 1px solid;
+                            width: 92%;
+                            padding: 10px;
+                            border-radius: 5px;
+                            color: #AFAFAF;
+                            background: #FFF;
+                            backdrop-filter: blur(10px);
+                            font-size: 15px;
+                            font-weight: 600;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        .picture_for_password {
+            background: url('../../../Images/mdpForgot.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border: 1px;
+        }
+    }
+}

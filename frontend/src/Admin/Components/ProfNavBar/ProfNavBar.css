@@ -1,0 +1,23 @@
+#ProfNavBar {
+    border-top: 1px solid var(--grey);
+    border-bottom: 1px solid var(--grey);
+}
+
+.ProfNavBar_content {
+    padding: 10px;
+}
+
+.ProfNavBar_ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ProfNavBar_ul li {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+}

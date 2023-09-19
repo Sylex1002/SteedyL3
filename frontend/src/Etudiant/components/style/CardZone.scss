@@ -1,0 +1,114 @@
+#CardZone {
+    background-color: white;
+    border-radius: 8px;
+    width: 350px;
+    min-height: 250px;
+    max-height: 250px;
+
+    .CardZone_content {
+        .CardZone_head {
+            padding: 12px;
+            background-color: #f48f305d;
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
+            padding-bottom: 24px;
+            display: grid;
+            grid-template-columns: 1fr 90px;
+            grid-template-rows: 1fr;
+
+            p {
+                font-size: 14px;
+                color: #333333ea;
+            }
+        }
+
+        .CardZone_body {
+            .CardZone_body_top {
+                padding-top: 40px;
+                background-color: #f48f305d;
+                padding-right: 10px;
+                padding-left: 10px;
+
+                span {
+                    font-size: 12px;
+                    color: grey;
+                }
+            }
+
+            .CardZone_body_center {
+                display: flex;
+                justify-content: flex-end;
+                position: relative;
+
+                .CardZone_body_icon {
+                    position: absolute;
+                    transform: translateX(-15px) translateY(-30px);
+                    border: 2px solid var(--bg);
+                }
+            }
+
+            .CardZone_body_bottom {
+                padding: 12px;
+                margin-bottom: 15px;
+
+                span {
+                    font-size: 14px;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .CardZone_foot {
+            display: grid;
+            grid-template-columns: 130px 1fr;
+            grid-template-rows: 1fr;
+            padding: 10px 10px;
+
+            .CardZone_foot_left {
+                display: flex;
+                align-items: center;
+                gap: 2px;
+
+                .CardZone_foot_left_dec {
+                    width: 60px;
+
+                    p {
+                        font-size: 10px;
+                        word-wrap: break-word;
+                    }
+                }
+            }
+
+            .CardZone_foot_right {
+                padding-left: 10px;
+                .CardZone_bnt {
+                    border: none;
+                    background-color: var(--bg);
+                    color: white;
+                    border-radius: 20px;
+                    font-size: 15px;
+                    padding: 8px 20px;
+                    font-weight: 550;
+                    width: 100%;
+                    cursor: pointer;
+                }
+                .CardZone_end_bnt{
+                    border: none;
+                    background-color: gray;
+                    color: black;
+                    border-radius: 20px;
+                    font-size: 15px;
+                    padding: 8px 20px;
+                    font-weight: 550;
+                    width: 100%;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #555555;
+                        color: white;
+                        transition: 1s ease-in-out;
+                    }
+                }
+            }
+        }
+    }
+}

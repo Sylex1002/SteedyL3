@@ -1,0 +1,54 @@
+.cardNotification{
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 12px;
+    border: 1px solid #25252507;
+    transition: ease 0.3s;
+    margin-top: 8px;
+    cursor: pointer;
+
+    &:hover{
+        background: var(--grey);
+    }
+
+    .cardImage{
+       // width: 20%;
+        max-width: 20%;
+        .smallImage{
+            width: 45px;
+            height: 45px;
+            border-radius: 6px;
+            // border: 2px solid var(--bg);
+            overflow: hidden;
+            img{
+                object-fit: cover;
+            }
+        }
+    }
+    .context{
+        width: 100%;
+        .subject{
+            display: inline-flex;
+            align-items: flex-end;
+            width: 100%;
+            p{
+                font-size: 14px;
+                font-weight: 700;
+                width: 50%;
+            }
+            span{
+                font-size: 11px;
+                color: #afafaf;
+                width: 50%;
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+        .msge{
+            font-size: 12px;
+        }
+    }
+}

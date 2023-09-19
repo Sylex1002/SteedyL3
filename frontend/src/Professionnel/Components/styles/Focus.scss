@@ -1,0 +1,30 @@
+.focus {
+    .title {
+        .trait {
+            width: 100px;
+            height: 2px;
+            background: var(--bg);
+        }
+    }
+
+    .focus-content {
+        min-height: 400px;
+
+        .focus-element {
+            position: relative;
+            min-height: 300px;
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #FFF;
+            box-shadow: -1px 0px 13px -3px rgba(31, 35, 31, 0.3);
+            -webkit-box-shadow: -1px 0px 13px -3px rgba(31, 35, 31, 0.3);
+            -moz-box-shadow: -1px 0px 13px -3px rgba(31, 35, 31, 0.3);
+
+            .cover {
+                background-size: cover !important;
+                background-repeat: no-repeat !important;
+            }
+        }
+    }
+}

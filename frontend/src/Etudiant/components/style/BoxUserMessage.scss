@@ -1,0 +1,64 @@
+.boxUserMessage{
+    // height: 40px;
+    // min-width: 15rem;
+    display: inline-flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 8px;
+    background: #FFF;
+    border-radius: 8px;
+    .box_content{
+        display: inline-flex;
+        flex-direction: row;
+        gap: 12px;
+        width: 100%;
+        .box_content_info{
+            width: 85%;
+        }
+    }
+    .boxImage{
+        width: 20%;
+        .image{
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            overflow: hidden;
+            object-fit: cover;
+        }
+    }
+    .userInfo{
+        width: 60%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        p{
+            font-size: 14px;
+            font-weight: 700;
+        }
+        span{
+            font-size: 12px;
+            color: #afafaf;
+        }
+        .membres-length{
+            font-size: 12px;
+            color: #afafaf;
+        }
+    }
+    .boxIconMessage{
+        width: 25%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        .iconMessage{
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: var(--grey);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    }
+
+}

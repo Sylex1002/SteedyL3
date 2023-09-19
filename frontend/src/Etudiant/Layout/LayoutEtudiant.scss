@@ -1,0 +1,51 @@
+#LayoutEtudiant {
+  background: var(--white);
+  height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+  // background: #f3f0ee;
+  position: relative;
+
+  .LayoutEtudiant_container {
+    width: 100%;
+    min-height: 90vh !important;
+    max-height: 90vh !important;
+    display: inline-flex;
+    overflow: hidden;
+
+    .drawerToggle {
+      background: #FFF;
+      padding-inline: 5px;
+      overflow: hidden;
+      transition: ease 0.3s;
+    }
+
+    #LayoutEtudiant_content {
+      // height: 89vh;
+      transition: ease 0.3s;
+      // scrollbar-color: #cecece;
+      // overflow-y: scroll !important;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #f3f0ee;
+      padding: 24px;
+
+    }
+  
+   
+
+    .LayoutEtudiant_content::-webkit-scrollbar {
+      width: .5rem;
+      background-color: #cecece;
+    }
+
+    .LayoutEtudiant_content::-webkit-scrollbar-thumb {
+      background-color: var(--bg);
+    }
+
+    .LayoutEtudiant_content::-webkit-scrollbar-thumb:hover {
+      background-color: #3a3939;
+    }
+
+  }
+}

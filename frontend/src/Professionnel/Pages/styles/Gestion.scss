@@ -1,0 +1,59 @@
+.title {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.cards {
+    margin-top: 24px;
+
+    .card {
+        width: 100%;
+        height: 20vh;
+        border-radius: 8px;
+        background: #FFF;
+        padding: 12px 24px;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        transition: ease 0.3s;
+
+        &:hover {
+            box-shadow: -1px 0px 13px -5px rgba(0, 0, 0, 0.28);
+            -webkit-box-shadow: -1px 0px 13px -5px rgba(0, 0, 0, 0.28);
+            -moz-box-shadow: -1px 0px 13px -5px rgba(0, 0, 0, 0.28);
+        }
+
+        .image {
+            flex: 1;
+
+            .img {
+                width: 45px;
+                height: 45px;
+                border-radius: 6px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .paragraphe {
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+
+            .titre {
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            .texte {
+                font-size: 14px;
+                color: #252525;
+            }
+        }
+    }
+}

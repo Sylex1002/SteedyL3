@@ -1,0 +1,80 @@
+.login{
+    height: 100vh;
+    background-color: var(--white);
+    color:var(--dark);
+    .form_login {
+        max-height: 90vh;
+        display: flex;
+        // grid-template-columns: repeat(auto-fit, minmax(35vh, 1fr));
+        // gap: 10px;
+        // grid-template-areas: 'side content';
+        .form {
+            flex: 1;
+            height: 85vh;
+            padding: 5px 15px;
+            .title {
+                font-weight: 600;
+                font-size: 20px;
+            }
+
+            .auth_compte {
+                // border: 1px solid;
+                margin-top: 20px;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(30vh, 1fr));
+                gap: 4px;
+
+                button {
+                    padding: 10px;
+                    background: none;
+                    border: 1px solid #2525251f;
+                    cursor: pointer;
+                }
+            }
+
+            .or_bar {
+                border: 1px solid #f3f0ee;
+                position: relative;
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 0px;
+
+                p {
+                    background: #FFF;
+                    padding: 0px 10px;
+                    margin-top: 10px;
+                }
+            }
+
+            form {
+                margin-top: 15px;
+                padding: 5px 20px;
+                // width: 100%;
+                border: 1px solid #2525251f;
+                height: auto;
+                border-radius: 10px;
+
+                .btn_login {
+                    margin-top: 15px;
+                    background: #f49030;
+                    border: 1px solid #f49030;
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 5px;
+                    color: #FFF;
+                    font-size: 15px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .picture_for_login {
+            flex: 1.5;
+            background: url('../../Images/auth.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+        }
+    }
+}

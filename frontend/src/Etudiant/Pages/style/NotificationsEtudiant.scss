@@ -1,0 +1,179 @@
+#NotificationsEtudiant {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 12px 0;
+
+    .NotificationsEtudiant_container {
+        width: 90%;
+        height: 100%;
+        background: #FFF;
+        border-radius: 12px;
+        padding: 12px;
+        overflow-y: scroll !important;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+
+        &::-webkit-scrollbar {
+            width: 2px;
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #afafaf;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: transparent;
+        }
+        
+        .title_content{
+            .title{
+                font-size: 22px;
+                font-weight: 700;
+            }
+            span{
+                display: block;
+                height: 3px;
+                width: 50px;
+                background-color: var(--bg);
+            }
+
+        }
+        .cards{
+            margin-top: 20px;
+        }
+    }
+
+    .view-high {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: #1f231fbe;
+        backdrop-filter: blur(3px);
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        padding: 24px;
+        z-index: 999 !important;
+
+        .btn-closed {
+            position: absolute;
+            right: 24px;
+            top: 24px;
+            color: #FFF;
+            transition: ease 0.3;
+
+            &:hover {
+                transform: rotate(360deg) scale(1.3);
+            }
+        }
+
+        .card-highlight {
+            width: 30vw;
+            height: 90%;
+            border-radius: 12px;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+            display: inline-flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 12px;
+
+            .identity {
+                width: 100%;
+                height: 12%;
+
+                .info-owner {
+                    width: 100%;
+                    height: 100%;
+                    background: #1f231f65;
+                    backdrop-filter: blur(3px);
+                    border-radius: 8px;
+                    padding-inline: 12px;
+                    display: flex;
+                    align-items: center;
+
+                    .profil {
+                        width: 45px;
+                        height: 45px;
+                        border-radius: 4px;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .text-info {
+                        color: #FFF;
+
+                        p {
+                            font-size: 14px;
+                            font-weight: 600;
+                        }
+
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+            .description-content {
+                width: 100%;
+                height: 88%;
+                display: flex;
+                align-items: flex-end;
+
+                .description-box {
+                    width: 100%;
+                    height: auto;
+                    max-height: 100%;
+                    padding: 12px;
+                    border-radius: 8px;
+                    color: #FFF;
+                    font-size: 14px;
+                    background: #1f231f65;
+                    backdrop-filter: blur(3px);
+                }
+            }
+        }
+
+        .actions {
+            width: 30vw;
+            height: 8%;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            color: #FFF;
+
+            .like,
+            .view {
+                padding: 8px 24px;
+                border-radius: 8px;
+                background: #ffffffce;
+                color: #000;
+            }
+
+            .like {
+                cursor: pointer;
+            }
+
+            .view {
+                color: #FFF;
+                background: #ffffff5e;
+                backdrop-filter: blur(5px);
+            }
+        }
+    }
+}
+
+

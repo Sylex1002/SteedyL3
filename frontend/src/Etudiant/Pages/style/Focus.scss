@@ -1,0 +1,44 @@
+#Focus {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    height: 90vh;
+    flex-shrink: 100 !important;
+
+    &::-webkit-scrollbar {
+        width: 2px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #afafaf;
+    }
+    .Focus_content{
+        width: 100%;
+      
+    }
+}
+
+#FocustNone {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .FocustNone_container {
+        background-color: white;
+        padding: 40px 60px;
+        border-radius: 10px;
+        text-align: center;
+
+        .FocustNone_title {
+            h1 {
+                color: var(--bg);
+                text-transform: uppercase;
+            }
+
+            span {
+                color: var(--red1);
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+.subscribe {
+    height: 100vh;
+    background: var(--white);
+    color: var(--black);
+
+    .form_subscribe {
+        max-height: 90vh;
+        display: flex;
+
+        .form {
+            flex: 1;
+            height: 90vh;
+            padding: 5px 15px;
+
+            .title {
+                font-weight: 600;
+                font-size: 20px;
+            }
+
+            .auth_compte {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(30vh, 1fr));
+                gap: 4px;
+
+                button {
+                    padding: 10px;
+                    background: none;
+                    border: 1px solid #0000003f;
+                    cursor: pointer;
+                }
+            }
+
+            .or_bar {
+                border: 1px solid #1d1d1d86;
+                position: relative;
+                margin-top: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 0px;
+
+                p {
+                    background: #FFF;
+                    padding: 0px 10px;
+                    margin-top: 10px;
+                }
+            }
+
+            form {
+                padding: 5px 20px;
+                border: 1px solid #2525251f;
+                height: auto;
+                border-radius: 10px;
+                margin-top: 15px;
+
+                .radioEtudiant,
+                .radioProfessionnel {
+                    //border: 1px solid #25252544;
+                    border: none;
+                    width: 100%;
+                    border-radius: 10px;
+                    padding: 5px;
+                }
+
+                .btn_subscribe {
+                    margin-top: 15px;
+                    background: #f49030;
+                    border: 1px solid #f49030;
+                    width: 100%;
+                    padding: 10px;
+                    border-radius: 5px;
+                    color: #FFF;
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .picture_for_subscribe {
+            flex: 1.5;
+            grid-area: content;
+            background: url('../../Images/auth.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+        }
+    }
+}
+
+.Error_return_signup {
+    background-color: rgba(244, 143, 48, 0.55);
+    color: white;
+    padding: 10px 10px;
+}
+.False_si{
+    background-color: #fff;
+}
+.Act_signup{
+    border-radius: 10px;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: 500;
+}

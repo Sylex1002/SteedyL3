@@ -1,0 +1,24 @@
+#HeaderBlock {
+    // padding: 10px 15px;
+    width: 100%;
+    height: 10vh;
+    max-height: 10vh;
+    display: flex;
+    align-items: center;
+    padding-inline: 24px;
+    background-color: var(--white);
+    z-index: 999;
+
+    .HeaderBlock_content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center !important;
+
+        .HeaderBlock_right {
+            .HeaderBlock_close {
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+# Fichiers et dossiers spécifiques à exclure
+node_modules
+build
+.DS_Store
+.env
+
+# Exclure les fichiers cachés et les fichiers de sauvegarde
+.*
+*~
+
+# Dossiers et fichiers spécifiques à exclure (ajoutez-en selon vos besoins)
+public/uploads
+src/tests

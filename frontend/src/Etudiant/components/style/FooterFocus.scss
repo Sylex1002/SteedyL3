@@ -1,0 +1,151 @@
+#FooterFocus {
+    background-color: var(--white);
+    // background-color: red;
+    color: #333;
+    // padding: 0px 15px;
+    padding-right: 15px;
+
+    .FooterFocus_content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        // padding: 0px 15px;
+
+        .FooterFocus_left {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            // gap: 10px;
+
+            .FooterFocus_left_img {
+                height: 75px;
+                width: 75px;
+                // padding: 15px 10px;
+                padding-left: 15px;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                padding-right: 15px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 5px;
+                    
+
+                }
+            }
+
+            .FooterFocus_left_dec {
+                width: 200px;
+
+                h4 {
+                    font-weight: bold;
+                }
+
+                span {
+                    margin-top: 5px;
+                    font-size: 14px;
+                    color: grey;
+                }
+            }
+        }
+
+        .FooterFocus_center {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            .FooterFocus_icon_pause {
+                font-size: 45px;
+                color: black;
+                cursor: pointer;
+            }
+
+            .FooterFocus_center_card {
+                .FooterFocus_icon {
+                    font-size: 23px;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .FooterFocus_right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+
+            .FooterFocus_center_card {
+                .FooterFocus_icon {
+                    font-size: 20px;
+                    cursor: pointer;
+                }
+            }
+
+            .FooterFocus_volume {
+                display: flex;
+                align-items: center;
+                margin-right: 25px;
+                margin-left: 25px;
+                gap: 8px;
+
+                .FooterFocus_volume_icon {
+                    cursor: pointer;
+                }
+
+                #FooterFocus_volume_input {
+                    font-size: 10px;
+
+                }
+
+            }
+
+            .FooterFocus_cancel_icon {
+                cursor: pointer;
+            }
+        }
+    }
+}
+.FooterFocus_icon{
+    &:hover{
+        background: grey;
+        padding: 5px;
+        border-radius: 50%;
+        color:var(--bg);
+    }
+}
+.ActiveFooterFocus_icon{
+    background: grey;
+    padding: 5px;
+    border-radius: 50%;
+    color:var(--bg);
+}
+
+.FooterFocus_ligne{
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    #FooterFocusLire_ligne_progressA{
+        position: absolute;
+        top: -13px !important;
+    }
+}
+
+.active_aleatoire {
+    cursor: pointer;
+    color: var(--bg);
+
+    &:hover {
+        color: #c9c7c7;
+    }
+}
+
+.Unactive_aleatoire {
+    cursor: pointer;
+
+    &:hover {
+        color: var(--bg);
+    }
+}

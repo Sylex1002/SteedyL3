@@ -1,0 +1,76 @@
+.box-other-createur {
+    height: 460px;
+    padding-inline: 24px;
+    padding-bottom: 10px;
+    overflow-y: scroll !important;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        width: 2px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #afafaf;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: transparent;
+    }
+
+    .card {
+        min-height: 60px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+
+        .info {
+            .profil {
+                width: 50px;
+                height: 50px;
+                border-radius: 12px;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .bio {
+                height: 60px;
+                padding-top: 4px;
+
+                .pseudo {
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+
+                .pro {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .btn-follow {
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button {
+                height: 35px;
+                padding-inline: 12px;
+                background: none;
+                border: none;
+                outline: none;
+                font-size: 14px;
+                font-weight: 600;
+                color: var(--bg);
+                cursor: pointer;
+            }
+        }
+    }
+}

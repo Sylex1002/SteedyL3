@@ -1,0 +1,11 @@
+frontend/node_modules
+backend/api/migrations
+backend/Etudiants/migrations
+backend/Focus/migrations
+backend/Highlight/migrations
+backend/messageGroupe/migrations
+backend/Messages/migrations
+backend/notification/migrations
+backend/Professionnels/migrations
+backend/publications/migrations
+backend/users/migrations

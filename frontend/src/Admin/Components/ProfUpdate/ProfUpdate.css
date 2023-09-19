@@ -1,0 +1,59 @@
+#ProfUpdate {
+    padding: 20px 50px;
+}
+
+.ProfUpdate_title {
+    text-align: center;
+}
+
+.ProfUpdate_title h3 {
+    text-transform: uppercase;
+    color: var(--bg);
+}
+
+.ProfUpdate_field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ProfUpdate_field input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+
+.ProfUpdate_field label {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.ProfUpdate_btn {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.ProfUpdate_btn button {
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: 550;
+    font-size: 17px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.ProfUpdate_btn button:nth-child(1) {
+    background-color: #333;
+    color: white;
+}
+
+.ProfUpdate_btn button:nth-child(2) {
+    background-color: var(--bg);
+    color: white;
+
+}

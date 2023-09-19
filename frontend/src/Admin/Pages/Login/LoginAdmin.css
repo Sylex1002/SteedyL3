@@ -1,0 +1,80 @@
+/* adminLogin style */
+.LoginAdmin {
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 100vh;
+}
+
+.LoginAdmin-content {
+    width: 70%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+}
+
+.LoginAdmin-form-content {
+    margin-top: 13%;
+    width: 500px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+    padding: 30px;
+}
+
+.LoginAdmin-header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.LoginAdmin-header img {
+    width: 8em;
+}
+
+.loginField {
+    margin-bottom: 20px;
+}
+
+.loginField label {
+    margin-bottom: 10px;
+}
+
+.loginField input {
+    padding: 12px;
+    background-color: #f2f2f2;
+    border: 1px solid #bbcdd2;
+    width: 100%;
+    color: #555;
+    border-radius: 4px;
+    line-height: 1.42857;
+    outline: none;
+}
+
+.btn-LoginAdmin {
+    padding: 10px;
+    border: none;
+    background-color: #f49030;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    font-size: 17px;
+    width: 100%;
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.LoginAdmin-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    margin-top: 10px;
+}
+
+.LoginAdmin-footer a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+}

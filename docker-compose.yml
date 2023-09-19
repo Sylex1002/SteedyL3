@@ -1,0 +1,32 @@
+version: "3"
+services:
+  frontend:
+    build:
+      context: ./frontend  # Chemin vers le dossier du frontend React
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend  # Chemin vers le dossier du backend Django
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgres://user:steedy@db:5432/steedy  # Configurez ceci avec vos détails
+    restart: always 
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: steedy
+      POSTGRES_USER: steedy
+      POSTGRES_PASSWORD: steedy
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

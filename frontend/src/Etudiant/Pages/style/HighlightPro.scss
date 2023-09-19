@@ -1,0 +1,20 @@
+.highlightPro {
+    display: flex;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    padding-right: 5px !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 85%;
+
+    &::-webkit-scrollbar {
+        width: 1px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #afafaf;
+    }
+}

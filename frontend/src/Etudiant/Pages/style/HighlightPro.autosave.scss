@@ -1,0 +1,17 @@
+.highlightPro {
+    display: flex;
+    justify-content: flex-start;
+    // flex-flow: row wrap;
+    // row-gap: 12px;
+    // column-gap: 12px;
+    margin-top: 12px; 
+    // padding: 0 12px;
+    gap:15px;
+    .title {
+        margin-left: 12px;
+
+        p {
+            font-size: 14px;
+        }
+    }
+}

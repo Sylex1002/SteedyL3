@@ -1,0 +1,134 @@
+.modal{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .modal-container{
+        position: relative;
+        border-radius: 10px;
+        height: 70%;
+        width: 25vw;
+        background-color: white;
+
+        .recherche{
+            position: relative;
+            display: flex;
+            margin-top: 20px;
+            justify-content: center;
+            margin-left: 3px;
+            width: 100%;
+            input{
+                width: 75%;
+                height: 35px;
+                border: none;
+                border-radius: 8px 0px 0px 8px;
+                background-color:  #9b9b9b;
+                padding-left: 30px;
+                padding-right: 30px;
+                font-size: 12px;
+                outline: none;
+            }
+            .annuler{
+                border: none;
+                position: relative;
+                width: 15%;
+                border-left: 1px solid #9b9b9b ;
+                border-radius: 0px 8px 8px 0px;
+                margin-left: 2px;
+                font-size: 11px;
+                background-color:  #9b9b9b;
+                color:  #3b3b3b;
+            }
+            #searchIcon{
+                position: relative;
+                display: flex;
+                margin-top: 8px;
+                margin-right: -28px;
+                color:  #828282;
+                width: 20px;
+                height: 20px;
+            }
+        }
+        .group-list::-webkit-scrollbar {
+            display: none;
+          }
+        .group-list{
+            justify-content: center;
+            // margin-top: 10px;
+            height: 90%;
+            padding-bottom: 15px;
+            overflow-y: scroll;
+            .group-container{
+                margin-top: 5px;
+                display: flex;
+                justify-content: center;
+                width:100%;
+                background-color: #e5e5e5;
+                .group-name{
+                    display: flex;
+                    margin-left: -5px;
+                    width: 80%;
+                    flex-direction: column;
+                    padding-left: 30px;
+                    border-radius: 8px 0px 0px 8px;
+                    bottom: 12px;
+                    p{
+                        font-weight: bold;
+                    }
+                    span{
+                        margin-top: 10px;
+                        font-size: 12px;
+                    }
+                }
+                .group-image{
+                    position: relative;
+                    display: flex;
+                    margin-left: 15px;
+
+                    img{
+                        width: 60px;
+                        height: 60px;
+                        object-fit: cover;
+                    }
+                }
+                .button-joindre{
+                    position: relative;
+                    background-color: #c9c9c9;
+                    border: none;
+                    outline: none;
+                    border-radius: 8px;
+                    margin-top: 12px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 30%;
+                    height: 35px;
+                    margin-right: 15px;
+                    #AddIcon{
+                        height: 60px;
+                        border-radius: 0px 8px 8px 0px;
+                    }
+                    &:hover {
+                        width: 35%;
+                        height: 35px;
+                        background-color: #bababa;
+                        transition-duration: 0.3s;
+
+                      }
+                }
+                p{
+                    font-size: 15px;
+                    margin-right: 15px;
+                }
+
+                &:hover {
+                    background-color: #eeeeee;
+                    justify-content: center;
+                    width:100%;
+                    border-radius: 10px;
+                  }
+            }
+        }      
+    }
+}

@@ -1,0 +1,108 @@
+.deleteHighlight {
+    width: 100%;
+    height: 100%;
+
+    .title {
+        color: #000;
+        height: 10%;
+
+        .trait {
+            width: 40%;
+            border: 3px solid var(--bg);
+        }
+    }
+
+    .highlights {
+        width: 100%;
+        height: 80%;
+        padding-right: 12px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        overflow-y: scroll !important;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+
+        .cardHighlightDelete {
+            position: relative;
+            height: 40vh;
+            border-radius: 12px;
+            overflow: hidden;
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+
+            .header {
+                height: 20%;
+                padding: 12px;
+                display: flex;
+                justify-content: flex-end;
+
+                .icon {
+                    width: 35px;
+                    height: 35px;
+                    padding: 8px;
+                    background: #e74d3cd5;
+                    border-radius: 8px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    z-index: 999 !important;
+                }
+            }
+
+            .description {
+                height: 80%;
+                color: #FFF;
+                display: flex;
+                align-items: flex-end;
+
+                .sentence {
+                    width: 100%;
+                    padding: 24px;
+                    background: rgb(0, 0, 0);
+                    background: linear-gradient(360deg, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0.3) 80%, rgba(0, 0, 0, 0));
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                background: #0000001a;
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 4px;
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #afafaf;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: transparent;
+        }
+    }
+
+    .footer-close {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 24px;
+
+        button {
+            border: 1px solid var(--grey);
+            background: var(--grey);
+            padding: 8px 24px;
+            border-radius: 8px;
+            color: #000;
+            font-size: 14px;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,56 @@
+#FonctionUser{
+    // background-color: green;
+    height: 100vh;
+   
+    .FonctionUser_container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        // margin: 5.5em auto;
+        text-align: center;
+        // background-color: red;
+        img{
+            height: 200px;
+            width: 300px;
+            text-align: center;
+        }
+        .FonctionUser_content{
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+        width: 600px;
+
+            .FonctionUser_card{
+
+                .radioEtudiant,
+                .radioProfessionnel {
+                    border: 1px solid #25252544;
+                    width: 100%;
+                    border-radius: 10px;
+                    padding: 5px;
+                }
+
+                .FonctionUser{
+                    button{
+                        margin-top: 15px;
+                        background: #f49030;
+                        border: 1px solid #f49030;
+                        width: 100%;
+                        padding: 10px;
+                        border-radius: 5px;
+                        color: #FFF;
+                        font-size: 15px;
+                        cursor: pointer;
+                        transition: .4s all;
+                        &:hover{
+                            background: #f48f308c;
+                        border: 1px solid #f48f308c;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

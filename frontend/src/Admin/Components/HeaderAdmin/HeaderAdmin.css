@@ -1,0 +1,80 @@
+#HeaderAdmin {
+    height: 57px;
+    border-bottom: 2px solid #bbcdd2;
+
+}
+
+.HeaderAdmin_dark span {
+    color: #f2f2f2;
+}
+
+.HeaderAdmin-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 30px;
+    padding: 10px;
+    color: #555;
+}
+
+.HeaderAdmin-search {
+    display: flex;
+    align-items: center;
+    border: 0.5px solid lightgray;
+}
+
+.HeaderAdmin-search input {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.HeaderAdmin-search input::placeholder {
+    font-size: 12px;
+}
+
+.HeaderAdmin-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.HeaderAdmin_itemt {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.HeaderAdmin_icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.HeaderAdmin_icon_dark {
+    color: #f2f2f2;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.counter {
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+.avatar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}

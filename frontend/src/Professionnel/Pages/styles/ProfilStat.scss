@@ -1,0 +1,112 @@
+.title {
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+
+    .goBack {
+        border: 1px solid transparent;
+        border-radius: 8px;
+        width: 30px;
+        height: 30px;
+        background: #FFF;
+        color: var(--bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    p {
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+
+.stats,
+.gerer {
+    .titre {
+        font-size: 12px;
+        font-weight: 600;
+        margin-top: 15px;
+        text-transform: uppercase;
+        padding: 8px 0;
+    }
+
+    .accordion {
+        margin-top: 12px;
+
+        .linkPro {
+            display: flex;
+            gap: 12px;
+
+            .copyLink {
+                flex: 3;
+                text-align: start;
+                padding-left: 25px;
+                // border: 1px solid;
+            }
+
+            .btn {
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                button {
+                    padding: 5px 10px;
+                    border-radius: 6px;
+                    background: var(--grey);
+                    border: 1px solid grey;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .cardStat {
+        // margin-top: 12px;
+        border-radius: 8px;
+        width: 100%;
+        background: #FFF;
+        padding: 5px;
+
+        .image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .small_title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000;
+        }
+
+        .small_text {
+            font-size: 14px;
+        }
+    }
+
+    .nbre-abonne {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p,
+        span {
+            text-align: center;
+        }
+
+        p {
+            font-size: 2em;
+            font-weight: 600;
+        }
+
+        span {
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+.creationFocus {
+    width: 100%;
+    height: 100vh;
+
+    .content {
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .new, .prom {
+            width: 25vw;
+            height: 45vh;
+            border-radius: 14px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #FFF;
+            transition: ease 0.3s;
+            &:hover{
+                cursor: pointer;
+                background: linear-gradient(0deg, rgba(244, 144, 48, 0.04), rgba(244, 144, 48, 0.04)), #FFFFFF;
+                border: 1px solid #F49030;
+                .icon{
+                    .myIcon{
+                        background: var(--bg);
+                    }
+                }
+            }
+
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .myIcon {
+                    width: 80px;
+                    height: 80px;
+                    background: var(--blue);
+                    border-radius: 14px;
+                    color: #FFF;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    transition: ease 0.3s;
+
+                    .iconSize {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+            .title{
+                font-size: 24px;
+            }
+        }
+    }
+}

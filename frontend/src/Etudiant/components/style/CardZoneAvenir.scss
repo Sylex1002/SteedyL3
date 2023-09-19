@@ -1,0 +1,90 @@
+#CardZoneAvenir{
+    background-color: white;
+    border-radius: 10px;
+    width: 350px;
+    min-height: 250px;
+    padding-bottom: 10px;
+
+    .CardZoneAvenir_content{
+        .CardZoneAvenir_head{
+            padding: 15px;
+            background-color: var(--blue);
+            color: white;
+            border-top-right-radius:20px;
+            border-top-left-radius: 10px;
+            padding-top: 50px;
+            display: grid;
+            grid-template-columns: 150px 1fr ;
+            grid-template-rows: 1fr;
+            p{
+                font-size: 12px;
+                font-weight: 600;
+                color: #f2f2f2b7;
+            }
+        }
+        .CardZoneAvenir_body{
+            .CardZoneAvenir_body_center{
+                display: flex;
+                justify-content: flex-end;
+                position: relative;
+                .CardZoneAvenir_body_icon{
+                    position: absolute;
+                    transform: translateX(-15px) translateY(-30px);
+                    border: 2.5px solid var(--bg);
+                }
+            }
+            .CardZoneAvenir_body_bottom{
+                padding:10px 10px;
+                span{
+                    font-weight: 700;
+                    font-size: 12px;
+                }
+            }
+            .CardZoneAvenir_body_dec{
+                display: grid;
+                grid-template-columns: 1fr 50px;
+                padding: 0 10px;
+                margin-bottom: 20px;
+                p{
+                    font-weight: 700;
+                    font-size: 14px;
+                }
+            }
+        }
+        .CardZoneAvenir_foot{
+            display: grid;
+            grid-template-columns: 130px 1fr;
+            grid-template-rows: 1fr;
+            padding: 15px 10px 0px 10px;
+
+            .CardZoneAvenir_foot_left{
+                display: flex;
+                align-items: center;
+                gap: 2px;
+                .CardZoneAvenir_foot_left_dec{
+                    width: 60px;
+                    display: flex;
+                    align-items: flex-start;
+                    p{
+                        font-size: 10px;
+                        word-wrap: break-word;
+                    }
+                }
+            }
+            .CardZoneAvenir_foot_right{
+                padding-left: 10px;
+                .CardZoneAvenir_bnt{
+                    border: none;
+                    background-color: var(--bg);
+                    color: white;
+                    border-radius: 20px;
+                    font-size:15px;
+                    padding: 7px 30px;
+                    font-weight: 550;
+                    width: 100%;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

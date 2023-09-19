@@ -1,0 +1,69 @@
+.cellWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.TableImage {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.TableStatus {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.TableActive {
+    color: green;
+    background-color: rgba(0, 128, 0, 0.144);
+}
+
+.TableDesactive {
+    color: goldenrod;
+    background-color: rgba(189, 189, 3, 0.103);
+}
+
+.TableBtn {
+    padding: 5px 8px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.TableBtn_del {
+    color: red;
+    border: 1px dotted rgba(255, 0, 0, 0.815);
+
+}
+
+.TableBtn_update {
+    color: green;
+    border: 1px dotted rgba(0, 128, 0, 0.89);
+
+
+}
+
+.TableAction_btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.TableRow:hover {
+    background-color: #555;
+    cursor: pointer;
+    color: white;
+}
+
+.TableBtn_view {
+    color: var(--bg);
+    font-weight: 400;
+
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}

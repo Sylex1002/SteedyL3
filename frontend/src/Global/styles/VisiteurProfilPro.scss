@@ -1,0 +1,496 @@
+.profilPro {
+    position: relative;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #afafaf;
+    }
+
+    .menuFixed {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        z-index: 9999 !important;
+    }
+
+    .profil {
+        min-height: 100vh;
+        border-bottom: 2px solid var(--grey);
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        background-attachment: fixed !important;
+
+        .boxProfil {
+            background: #0000005d;
+            backdrop-filter: blur(5px);
+            z-index: 999 !important;
+
+            // .menuPro {
+            //     height: 10vh;
+            //     // border: 1px solid blue;
+            // }
+
+            .middleAll {
+                width: 100%;
+                height: 100vh !important;
+                // border: 1px solid red;
+                z-index: 999 !important;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: -10px;
+                    left: 0;
+                    width: 100%;
+                    height: 56%;
+                    background: var(--grey);
+                    backdrop-filter: blur(10px);
+                    z-index: 0 !important;
+                }
+
+                .all {
+                    width: 80%;
+                    height: 90%;
+
+                    .profilInfo {
+                        height: 100%;
+                        // border: 1px solid;
+                        padding: 12px;
+                        z-index: 999 !important;
+
+                        .image {
+                            height: 80%;
+
+                            .pdp {
+                                height: 100%;
+                                width: 100%;
+                                position: relative;
+                                overflow: hidden;
+                                border-radius: 8px;
+
+                                .hoveringAction {
+                                    position: absolute;
+                                    inset: 0;
+                                    // transform: translate(-50%,-50%);
+                                    width: 100%;
+                                    height: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background: #0000005b;
+                                    backdrop-filter: blur(5px);
+                                    z-index: -999 !important;
+                                    opacity: 0;
+                                    transition: ease 0.5s;
+                                }
+
+                                &:hover {
+                                    .hoveringAction {
+                                        opacity: 0.8;
+                                        z-index: 999 !important;
+                                    }
+                                }
+
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                }
+                            }
+                        }
+
+                        .biographie {
+                            max-width: 100%;
+                            border-radius: 8px;
+                            background: #FFF;
+                            padding: 12px;
+                            margin-top: 12px;
+
+                            .paragraphe {
+                                font-size: 12px;
+                                margin-top: 15px;
+                                text-align: justify;
+                            }
+                        }
+                    }
+
+                    .freeInfo {
+                        // border: 1px solid;
+                        z-index: 999 !important;
+
+                        .infoPerso {
+                            width: 100%;
+                            height: 25%;
+                            display: flex;
+                            align-items: flex-end;
+                            // border: 1px solid red;
+                            padding: 12px 0;
+
+                            .name {
+                                display: flex;
+                                align-items: flex-end;
+                                height: 100%;
+                                font-size: 30px;
+                                font-weight: 700;
+                                color: #FFF;
+                                letter-spacing: 1px;
+
+                                span {
+                                    color: #FFF;
+                                    font-size: 12px;
+                                    margin-top: 12px;
+                                    font-weight: lighter;
+                                }
+                            }
+
+                            .followers {
+                                display: flex;
+                                align-items: center;
+                                height: 50%;
+                                margin-top: 12px;
+
+                                p {
+                                    border-radius: 50px;
+                                    background: #00000063;
+                                    padding: 8px 10px;
+                                    width: 8rem;
+                                    text-align: center;
+                                    color: #FFF;
+                                }
+                            }
+                        }
+
+                        .follow {
+                            height: 10%;
+                            // border: 1px solid orange;
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 12px;
+
+                            .btn {
+                                position: relative;
+                                width: 8rem;
+                                height: 30px;
+                                display: flex;
+                                align-items: center;
+                                overflow: hidden;
+
+                                border-radius: 50px;
+                                // background: #00000063;
+                                padding: 0;
+                                text-align: center;
+                                color: #FFF;
+
+                                .followBtn {
+                                    flex: 3;
+                                    cursor: pointer;
+
+                                    .desabonner {
+                                        width: 100%;
+                                        height: 30px;
+                                        background-color: transparent;
+                                        border: 1px solid #ffffff2a;
+                                        color: #FFF;
+                                        border-radius: 8px;
+                                        cursor: pointer;
+                                        transition: all 0.4s linear;
+                                    }
+
+                                    .abonner {
+                                        width: 100%;
+                                        height: 30px;
+                                        background-color: #FEA255;
+                                        border: 1px solid #FEA255;
+                                        color: #FFF;
+                                        border-radius: 8px;
+                                        cursor: pointer;
+                                        transition: all 0.4s linear;
+                                    }
+                                }
+                            }
+
+                            .btnMsge {
+                                position: relative;
+                                width: auto;
+                                height: 30px;
+                                display: flex;
+                                align-items: center;
+                                overflow: hidden;
+                                border-radius: 50px;
+                                background: #00000063;
+                                padding: 0;
+                                text-align: center;
+                                color: #FFF;
+                                padding-inline: 12px;
+
+                                button {
+                                    width: auto;
+                                    height: 100%;
+                                    background-color: transparent;
+                                    border: 1px solid transparent;
+                                    color: #FFF;
+                                    border-radius: 50px;
+                                    transition: all 0.4s linear;
+                                    display: inline-flex;
+                                    justify-content: center;
+                                    gap: 8px;
+
+                                    .icon {
+                                        // flex: 1;
+                                        height: 100%;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                    }
+
+                                    p {
+                                        // flex: 3;
+                                        height: 100%;
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        align-items: center;
+                                    }
+                                }
+                            }
+                        }
+
+                        .menuPaginationFree {
+                            position: relative;
+                            width: 100%;
+                            height: 10%;
+                            // border: 1px solid #000;
+                            display: inline-flex;
+                            flex-direction: row;
+                            align-items: center;
+
+                            .highlight,
+                            .focus,
+                            .about {
+                                width: 10rem;
+                                padding: 12px 0;
+                                color: #FFF;
+                                text-align: center;
+                                cursor: pointer;
+                                z-index: 999 !important;
+
+                                // &:nth-child(1):hover~.bar_active {
+                                //     transform: translateX(0);
+                                // }
+
+                                // &:nth-child(2):hover~.bar_active {
+                                //     transform: translateX(10rem);
+                                // }
+
+                                // &:nth-child(3):hover~.bar_active {
+                                //     transform: translateX(20rem);
+                                // }
+                            }
+
+                            .active {
+                                color: #FEA255;
+                                background: transparent;
+                                // font-weight: 700;
+                            }
+
+                            .bar_active {
+                                position: absolute;
+                                bottom: 0;
+                                height: 3px;
+                                width: 10rem;
+                                background-color: #fea15546;
+                                border-bottom: 3px solid #FEA255;
+                                z-index: 0 !important;
+                                transition: transform 0.25s;
+                            }
+                        }
+
+                        .showFreeProduct {
+                            padding: 12px 0;
+                            padding-right: 12px;
+                            height: 50%;
+
+                            .title {
+                                font-size: 14px;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                            }
+
+                            .focusPub,
+                            .FocusContent {
+                                max-height: 42vh;
+
+                                .produits {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 12px;
+                                    padding-right: 12px;
+                                    overflow-y: auto;
+                                    overflow-x: hidden;
+                                    scrollbar-width: thin;
+
+                                    &::-webkit-scrollbar {
+                                        width: 5px;
+                                        background-color: transparent;
+                                    }
+
+                                    &::-webkit-scrollbar-thumb {
+                                        background-color: #afafaf;
+                                    }
+                                }
+                            }
+
+                            .aboutMe {
+                                height: 100%;
+
+                                p {
+                                    font-size: 12px;
+                                }
+
+                                .title {
+                                    font-size: 14px;
+                                }
+
+                                .infoPerso,
+                                .infoProf {
+                                    background: #FFF;
+                                    height: 100%;
+                                    border-radius: 8px;
+                                    padding: 12px;
+
+                                    // border: 1px solid rgba(0, 0, 0, 0.3);
+                                    .nom {
+                                        display: flex;
+                                        align-items: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .ifAbonne {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .allPaid {
+            width: 80%;
+            height: 100vh;
+
+            .title {
+                font-size: 18px;
+            }
+
+            .highlightPro {
+                width: 100%;
+                height: auto;
+                display: flex;
+                justify-content: flex-start;
+
+                .swiper {
+                    width: 100%;
+
+                    .swiper-slide {
+                        flex-shrink: 100 !important;
+                        width: 70px;
+                        min-height: 70px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+
+                        p {
+                            font-size: 12px;
+                        }
+
+                        img {
+                            width: 60px;
+                            height: 60px;
+                            border-radius: 8px;
+                            border: 1px solid #25252541;
+                        }
+                    }
+                }
+            }
+
+            .focusSerie {
+                padding: 12px;
+                margin-top: 12px;
+
+                .showFocus {
+                    // display: inline-flex;
+                    // gap: 12px;
+                    margin-top: 12px;
+
+                    .swiper-slide {
+                        flex-shrink: 100 !important;
+
+                        .viewAll {
+                            width: 250px;
+                            height: 310px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: 1px solid #252525;
+
+                            p {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+
+                .viewAllSerie {
+                    position: relative;
+                    width: 100%;
+                    height: 2px;
+                    background: linear-gradient(to right, #25252500, #25252534, #25252500);
+                    margin-top: 24px;
+
+                    .btnView {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        height: 30px;
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 10px;
+                        border-radius: 10rem;
+                        padding: 5px 10px;
+                        border: 1px solid #25252534;
+                        background: var(--grey);
+                        cursor: pointer;
+
+                        p {
+                            font-size: 12px;
+                        }
+
+                        .icon {
+                            width: 12px;
+                            height: 12px;
+                            color: #1f1f1f;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

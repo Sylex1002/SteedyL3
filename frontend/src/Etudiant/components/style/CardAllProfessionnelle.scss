@@ -1,0 +1,139 @@
+.CardAllProfessionnel {
+    position: relative;
+    min-width: 17.7vw;
+    padding: 20px;
+    padding-inline: 10px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: none;
+    cursor: default !important;
+    box-shadow: none;
+    text-align: center;
+
+    .hoveringAction {
+        position: absolute;
+        inset: -2px;
+        // left: -4px;
+        // transform: translate(-50%,-50%);
+        width: 104%;
+        height: 105%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: none;
+        border-radius: 50%;
+        // backdrop-filter: blur(2px);
+        z-index: -999 !important;
+        opacity: 0;
+        transition: ease 0.5s;
+    }
+    
+    .rounded{
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: none;
+        border-radius: 50% !important;
+    }
+
+    &:hover {
+        cursor: default;
+        background: #FFF;
+
+        .hoveringAction {
+            opacity: 0.8;
+            z-index: 999 !important;
+        }
+
+        // .profilPhoto {
+        //     border-right: 2px solid #f49030;
+        // }
+    }
+
+    .profilsImage {
+        position: relative;
+        // min-height: 220px;
+        display: flex;
+        justify-content: center !important;
+        align-items: flex-start;
+
+        .profilPhoto_content{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .profilPhoto {
+                position: relative;
+                width: 110px;
+                height: 110px;
+                border-radius: 50%;
+                padding: 3px;
+                .profilPhoto_img{
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 50%;
+                }
+    
+                img {
+                    object-fit: cover;
+                    border-radius: 50%;
+                    transition: ease 0.7s;
+                }
+            }
+        }
+
+        .nameStatut {
+            max-height: 40px;
+            display: flex;
+            justify-content: center;
+            font-size: 12px;
+
+            .info {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+
+            .statut {
+                height: 20px;
+                font-size: 12px;
+                display: flex;
+                align-items: center;
+                color: #afafaf;
+            }
+        }
+
+        .CardAllProfessionnel_abonne {
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            font-size: 12px;
+            color: #afafaf;
+        }
+    }
+
+    .btnBottom_card_pro {
+        margin-top: 12px;
+
+        button {
+            border: none;
+            cursor: pointer;
+        }
+
+        .card_pro_btn1 {
+            background: #feebda;
+            color: var(--bg);
+            border-radius: 8px;
+            font-size: 12px;
+            padding: 12px;
+        }
+
+        .card_pro_btn2 {
+            background-color: var(--grey);
+            padding: 8px;
+            border-radius: 8px;
+        }
+    }
+}

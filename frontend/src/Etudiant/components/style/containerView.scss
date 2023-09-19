@@ -1,0 +1,86 @@
+.containerView {
+    width: 100%;
+    // border: 1px solid;
+    padding: 10px;
+
+    .sideBarRight {
+        // border: 1px solid;
+        height: 99%;
+
+        .profil {
+            position: relative;
+            background: #FFF;
+            // border: 1px solid grey;
+            min-height: 150px;
+            max-width: 100%;
+            padding: 10px;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 15px;
+            color: #000;
+
+            .coverPdp {
+                // border: 1px solid;
+                min-height: 150px;
+                width: 100%;
+
+                .couverture {
+                    width: 100%;
+                    height: 70px;
+                    background: url('../../../Images/paysage.jpg');
+                    background-size: cover;
+                    // border: 1px solid;
+                }
+
+                .pdp {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 80%;
+                    max-width: 100%;
+                    height: 80px;
+                    flex-direction: column;
+                    // border: 1px solid;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+
+                    .image {
+                        border: 3px solid #FFF;
+                        width: 50px;
+                        height: 50px;
+                        border-radius: 10px;
+
+                        img {
+                            height: 50px;
+                            object-fit: cover;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+
+            // .userName{
+            //     display: flex;
+            //     justify-content: center;
+            // }
+            .btnViewProfil {
+                width: 100%;
+
+                button {
+                    min-width: 100%;
+                    height: 35px;
+                    background: #f49030;
+                    color: #FFF;
+                    border: 1px solid #f49030;
+                    border-radius: 10px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

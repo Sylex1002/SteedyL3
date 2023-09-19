@@ -1,0 +1,41 @@
+.layoutDashboard {
+    width: 100%;
+    height: 100vh;
+    background: #FFF;
+
+    .contentLayout {
+        width: 100%;
+        height: 91vh;
+        display: inline-flex;
+        flex-direction: row;
+
+        .drawer {
+            width: 20%;
+            height: 100%;
+        }
+
+        .views {
+            position: relative;
+            width: 80%;
+            height: 100%;
+            border-radius: 8px;
+            background: var(--grey);
+            padding: 24px;
+            overflow-x: hidden;
+            scrollbar-width: thin;
+
+            &::-webkit-scrollbar {
+                width: 5px;
+                background-color: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: #afafaf;
+            }
+
+            &::-webkit-scrollbar-thumb:hover {
+                background-color: transparent;
+            }
+        }
+    }
+}

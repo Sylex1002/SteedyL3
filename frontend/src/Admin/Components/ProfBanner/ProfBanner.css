@@ -1,0 +1,118 @@
+#ProfBanner {
+    /* height: 50px; */
+}
+
+.ProfBanner_content {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    background: url("../../../Assets/marvin-meyer-SYTO3xs06fU-unsplash.jpg") center/cover no-repeat;
+
+}
+
+.ProfBanner_card {
+    text-align: center;
+    position: relative;
+}
+
+.ProfBanner_card_head img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #fff;
+}
+
+.ProfBanner_upload_card {
+    position: absolute;
+    right: -1px;
+    bottom: 40px;
+    background-color: white;
+    padding: 7px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.ProfBanner_upload {
+    cursor: pointer;
+}
+
+.ProfBanner_footer {
+    background-color: white;
+
+}
+
+.ProfBanner_title {
+    font-size: 20px;
+    background-color: white;
+    color: var(--bg);
+    padding: 5px 10px;
+}
+
+#ProfBanner_file {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.ProfBanner_bio {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 15px;
+    width: 400px;
+
+}
+
+.ProfBanner_bio_content {
+    padding: 15px 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProfBanner_bio_icon {
+    cursor: pointer;
+}
+
+.UpdateBio_form {
+    display: flex;
+}
+
+.UpdateBio_form textarea {
+    outline: none;
+    border: none;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 300px;
+}
+
+.UpdateBio_btn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+.UpdateBio_btn button {
+    padding: 5px 10px;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.UpdateBio_btn button:nth-child(1) {
+    background-color: #333;
+    color: white;
+}
+
+.UpdateBio_btn button:nth-child(2) {
+    background-color: var(--bg);
+    color: white;
+
+}

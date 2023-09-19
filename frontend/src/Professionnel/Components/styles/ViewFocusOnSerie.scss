@@ -1,0 +1,284 @@
+.ViewFocusOnSerie {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../../Assets/pexels-tommy-lopez-765139.jpg');
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    z-index: 999 !important;
+
+    .all-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .content-focus {
+            width: 80%;
+            height: 90%;
+            border-radius: 12px;
+            background: #25252580;
+            backdrop-filter: blur(3px);
+            display: inline-flex;
+            flex-direction: column;
+            padding-bottom: 24px;
+
+            .header-content {
+                width: 100%;
+                height: 10%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-inline: 24px;
+                box-shadow: 0px 5px 4px -2px rgba(0, 0, 0, 0.25);
+                -webkit-box-shadow: 0px 5px 4px -2px rgba(0, 0, 0, 0.25);
+                -moz-box-shadow: 0px 5px 4px -2px rgba(0, 0, 0, 0.25);
+
+                .title {
+                    font-size: 17px;
+                    font-weight: 600;
+                    color: var(--bg);
+                    height: 35px;
+                    cursor: pointer;
+
+                    .back-icon {
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .search-content {
+                    .search-box {
+                        height: 35px;
+                        width: 30vw;
+                        display: inline-flex;
+                        flex-direction: row;
+
+                        .search-icon {
+                            width: 15%;
+                            height: 100%;
+                            border-bottom: 1px solid #fff;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        input {
+                            width: 85%;
+                            height: 100%;
+                            outline: none;
+                            border: none;
+                            border-bottom: 1px solid #FFF;
+                            background: transparent;
+                            color: #FFF;
+                            font-size: 14px;
+
+                            &::placeholder {
+                                font-size: 14px;
+                                color: #FFF;
+                            }
+                        }
+                    }
+
+                    .create-focus {
+                        border: 1px solid var(--bg);
+                        height: 35px;
+                        border-radius: 4px;
+                        overflow: hidden;
+                        cursor: pointer;
+                        transition: ease 0.3s;
+
+                        &:hover{
+                            background: var(--bg);
+                        }
+
+                        .btn-create {
+                            width: 100%;
+                            height: 100%;
+                            margin-bottom: 5px;
+
+                            .icon {
+                                width: 35px;
+                                height: 35px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                            }
+
+                            .text {
+                                height: 35px;
+                                padding-right: 12px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #FFF;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .description-serie {
+                max-height: 20%;
+                padding: 24px;
+                color: #FFF;
+                font-size: 14px;
+            }
+
+            .list-focus {
+                min-height: 70%;
+                max-height: 90%;
+                padding: 24px;
+                overflow-y: scroll !important;
+                overflow-x: hidden;
+                scrollbar-width: thin;
+
+                &::-webkit-scrollbar {
+                    width: 2px;
+                    background-color: transparent;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background-color: #afafaf;
+                }
+
+                &::-webkit-scrollbar-thumb:hover {
+                    background-color: transparent;
+                }
+
+                .focus-card {
+                    width: 100%;
+                    height: 300px;
+                    // border: 1px solid;
+                    box-shadow: 0px 0px 30px -3px rgba(0, 0, 0, 0.65);
+                    -webkit-box-shadow: 0px 0px 30px -3px rgba(0, 0, 0, 0.65);
+                    -moz-box-shadow: 0px 0px 30px -3px rgba(0, 0, 0, 0.65);
+                    border-radius: 12px;
+                    display: inline-flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    color: #FFF;
+                    // padding: 8px;
+                    background-size: cover !important;
+
+                    .image {
+                        position: relative;
+                        height: 100%;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        background: #25252563;
+                        box-shadow: 0px 0px 30px -3px rgba(0, 0, 0, 0.65);
+                        -webkit-box-shadow: 0px 0px 30px -3px rgba(0, 0, 0, 0.65);
+                        -moz-box-shadow: 0px 0px 30px -3px rgba(0, 0, 0, 0.65);
+                        display: inline-flex;
+                        flex-direction: column;
+
+                        .titre-focus {
+                            height: 10%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 14px;
+                            padding: 12px;
+                        }
+
+                        .actions {
+                            width: 100%;
+                            height: 90%;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: flex-end;
+                            padding: 12px;
+
+                            .pause {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 100%;
+                                height: 100%;
+                                font-size: 12px;
+                                font-weight: 600;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                cursor: pointer;
+                                opacity: 0;
+                                transition: ease 0.3s;
+                                cursor: pointer;
+
+                                &:hover {
+                                    opacity: 1;
+                                }
+                            }
+
+                            .stop {
+                                width: 35px;
+                                height: 35px;
+                                border-radius: 8px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.7);
+                                -webkit-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.7);
+                                -moz-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.7);
+                                z-index: 999 !important;
+                            }
+
+                            .time {
+                                padding: 6px 12px;
+                                font-size: 12px;
+                                background: #252525a4;
+                                backdrop-filter: blur(3px);
+                                border-radius: 4px;
+                            }
+                        }
+                    }
+
+                }
+
+                .focus-active {
+                    box-shadow: 0px 0px 31px -12px rgba(244, 144, 48, 0.99);
+                    -webkit-box-shadow: 0px 0px 31px -12px rgba(244, 144, 48, 0.99);
+                    -moz-box-shadow: 0px 0px 31px -12px rgba(244, 144, 48, 0.99);
+                    border: 1px solid var(--bg);
+                }
+
+                .serie-none {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .msg-empty {
+                        width: 30vw;
+                        height: 30vh;
+                        display: inline-flex;
+                        flex-direction: column;
+                        gap: 24px;
+                        justify-content: center;
+
+                        .icon {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+                        }
+
+                        .message {
+                            width: 100%;
+                            text-align: center;
+                            font-size: 17px;
+                            // font-weight: 600;
+                            color: #FFF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+#Experience_admin {
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.Experience_admin_title {
+    margin-bottom: 10px;
+}
+
+.Experience_admin_date {
+    margin-bottom: 10px;
+}
+
+.Experience_admin_desc p {
+    font-size: 13px;
+}

@@ -1,0 +1,515 @@
+  {messages.map((message, index) => {
+              const timestamp = message.timestamp;
+              const isCurrentUser = message.user_sender === user_connect.id;
+
+              if (message.file) {
+                if (message.file.type.startsWith("image")) {
+                  return (
+                    <div
+                      className={`user-message ${
+                        isCurrentUser ? "user-message" : "other-message"
+                      }`}
+                      key={index}
+                    >
+                      <div
+                        className={
+                          isCurrentUser
+                            ? "profil-user-right"
+                            : "profil-user-left"
+                        }
+                      >
+                        <img
+                          className={
+                            isCurrentUser
+                              ? "profil-content-right"
+                              : "profil-content-left"
+                          }
+                          src={`${baseUrl}${
+                            isCurrentUser
+                              ? user_connect?.image_url
+                              : userDetMessage?.image_url
+                          }`}
+                          alt="steedy-profil"
+                        />
+                      </div>
+                      <div
+                        className={
+                          isCurrentUser
+                            ? "message-content-right"
+                            : "message-content-left"
+                        }
+                      >
+                        <b>{isCurrentUser ? "" : userDetMessage?.first_name}</b>
+                        <p>{message.message}</p>
+                        <a
+                          href={`${baseUrl}${message.file.data}`}
+                          target="_blank"
+                          download={`${message.file.name}`}
+                        >
+                          <img
+                            className="image-content"
+                            src={
+                              message.file.data.split("/")[1] !== "media"
+                                ? `${message.file.data}`
+                                : `${baseUrl}${message.file.data}`
+                            }
+                            alt="..."
+                          />
+                        </a>
+                        <p className="timestamp">{dataParseHM(timestamp)}</p>
+                      </div>
+                    </div>
+                  );
+                } else if (message.file.type.startsWith("video")) {
+                  return (
+                    <div
+                      className={`user-message ${
+                        isCurrentUser ? "user-message" : "other-message"
+                      }`}
+                      key={index}
+                    >
+                      <div
+                        className={
+                          isCurrentUser
+                            ? "profil-user-right"
+                            : "profil-user-left"
+                        }
+                      >
+                        <img
+                          className={
+                            isCurrentUser
+                              ? "profil-content-right"
+                              : "profil-content-left"
+                          }
+                          src={`${baseUrl}${
+                            isCurrentUser
+                              ? user_connect.image_url
+                              : userDetMessage.image_url
+                          }`}
+                          alt="steedy-profil"
+                        />
+                      </div>
+                      <div
+                        className={
+                          isCurrentUser
+                            ? "message-content-right"
+                            : "message-content-left"
+                        }
+                      >
+                        <b>{isCurrentUser ? "" : userDetMessage.first_name}</b>
+                        <p>{message.message}</p>
+                        <video
+                          className="video-content"
+                          src={
+                            message.file.data.split("/")[1] !== "media"
+                              ? `${message.file.data}`
+                              : `${baseUrl}${message.file.data}`
+                          }
+                          alt="..."
+                          controls
+                        />
+                        <p className="timestamp">{dataParseHM(timestamp)}</p>
+                      </div>
+                    </div>
+                  );
+                } else if (message.file.type.startsWith("application")) {
+                  return (
+                    <div
+                      className={`user-message ${
+                        isCurrentUser ? "user-message" : "other-message"
+                      }`}
+                      key={index}
+                    >
+                      <div
+                        className={
+                          isCurrentUser
+                            ? "profil-user-right"
+                            : "profil-user-left"
+                        }
+                      >
+                        <img
+                          className={
+                            isCurrentUser
+                              ? "profil-content-right"
+                              : "profil-content-left"
+                          }
+                          src={`${baseUrl}${
+                            isCurrentUser
+                              ? user_connect.image_url
+                              : userDetMessage.image_url
+                          }`}
+                          alt="Profil-image"
+                        />
+                      </div>
+                      <div
+                        className={
+                          isCurrentUser
+                            ? "message-content-right"
+                            : "message-content-left"
+                        }
+                      >
+                        <b>{isCurrentUser ? "" : userDetMessage.first_name}</b>
+                        {/* <p>{message.message}</p> */}
+                        <a
+                          className="link-content"
+                          href={`${baseUrl}${message.file.data}`}
+                          download={message.file.name}
+                        >
+                          {message.file.name.split("/")[2]}
+                        </a>
+                        <p className="timestamp">{dataParseHM(timestamp)}</p>
+                      </div>
+                    </div>
+                  );
+                } else {
+                  return (
+                    <div
+                      className={`user-message ${
+                        isCurrentUser ? "user-message" : "other-message"
+                      }`}
+                      key={index}
+                    >
+                      <div className="message-content">
+                        <b>{isCurrentUser ? "" : userDetMessage.first_name}</b>
+                        <p>{message}</p>
+                        <p className="timestamp">{dataParseHM(timestamp)}</p>
+                        <audio src={`${baseUrl}${message.audio}`} controls />
+                      </div>
+                    </div>
+                  );
+                }
+              } else if (message.message) {
+                // Check if message contains a link
+                const linkPattern =
+                  /(?:^|\s)((?:https?:\/\/)?(?:www\.(?:[\w-]+\.)*[\w-]+(?::\d+)?(?:\/\S*)?)|(?:[\w-]+\.)*[\w-]+(?:\.\w+))(?:$|\s)/;
+                const match = message.message.match(linkPattern);
+
+                if (match) {
+                  const linkUrl = match[1];
+                  const linkText = match[0];
+                  const messageParts = message.message.split(match[0]);
+
+                  return (
+                    <div
+                      className={`user-message ${
+                        isCurrentUser ? "user-message" : "other-message"
+                      }`}
+                      key={index}
+                    >
+                      <div
+                        className={
+                          isCurrentUser
+                            ? "profil-user-right"
+                            : "profil-user-left"
+                        }
+                      >
+                        <img
+                          className={
+                            isCurrentUser
+                              ? "profil-content-right"
+                              : "profil-content-left"
+                          }
+                          src={`${baseUrl}${
+                            isCurrentUser
+                              ? user_connect?.image_url
+                              : userDetMessage?.image_url
+                          }`}
+                          alt="Profil-image"
+                        />
+                      </div>
+                      <div
+                        className={
+                          isCurrentUser
+                            ? "message-content-right"
+                            : "message-content-left"
+                        }
+                      >
+                        <b>{isCurrentUser ? "" : userDetMessage?.first_name}</b>
+                        <p>
+                          {messageParts[0]}{" "}
+                          <a href={linkUrl} style={{ color: "blue" }}>
+                            {linkText}
+                          </a>{" "}
+                          {messageParts[1]}
+                        </p>
+                        <p className="timestamp">{dataParseHM(timestamp)}</p>
+                      </div>
+                    </div>
+                  );
+                } else {
+                  return (
+                    <div
+                      className={`user-message ${
+                        isCurrentUser ? "user-message" : "other-message"
+                      }`}
+                      key={index}
+                    >
+                      <div
+                        className={
+                          isCurrentUser
+                            ? "profil-user-right"
+                            : "profil-user-left"
+                        }
+                      >
+                        <img
+                          className={
+                            isCurrentUser
+                              ? "profil-content-right"
+                              : "profil-content-left"
+                          }
+                          src={`${baseUrl}${
+                            isCurrentUser
+                              ? user_connect?.image_url
+                              : userDetMessage?.image_url
+                          }`}
+                          alt="Profil-image"
+                        />
+                      </div>
+                      <div
+                        className={
+                          isCurrentUser
+                            ? "message-content-right"
+                            : "message-content-left"
+                        }
+                      >
+                        <b>{isCurrentUser ? "" : userDetMessage?.first_name}</b>
+                        <p style={{ marginTop: "8px" }}>{message.message}</p>
+                        <p className="timestamp">{dataParseHM(timestamp)}</p>
+                      </div>
+                    </div>
+                  );
+                }
+              }
+              
+            })}
+
+
+
+==================================
+  .filter((item) =>
+                    item.file?.name
+                      .split("/")
+                      .pop()
+                      .includes(searchInput.toLocaleLowerCase())
+                  )
+=========================================================
+    {/* const timestamp = message.timestamp;
+                const isCurrentUser = message.user_sender === user_connect.id;
+                if (message.file) {
+                  if (message.file.type.startsWith("image")) {
+                    return (
+                      <div
+                        className={`user-message ${
+                          isCurrentUser ? "user-message" : "other-message"
+                        }`}
+                        key={index}
+                      >
+                        <div
+                          className={
+                            isCurrentUser
+                              ? "profil-user-right"
+                              : "profil-user-left"
+                          }
+                        >
+                          <img
+                            className={
+                              isCurrentUser
+                                ? "profil-content-right"
+                                : "profil-content-left"
+                            }
+                            src={`${baseUrl}${
+                              isCurrentUser
+                                ? user_connect.image_url
+                                : userDetMessage.image_url
+                            }`}
+                            alt="Profil-image"
+                          />
+                        </div>
+                        <div
+                          className={
+                            isCurrentUser
+                              ? "message-content-right"
+                              : "message-content-left"
+                          }
+                        >
+                          <b>{isCurrentUser ? "" : userDetMessage.username}</b>
+                          <p>{message.message}</p>
+                          <a
+                            href={`${baseUrl}${message.file.data}`}
+                            download={`${message.file.name}`}
+                          >
+                            <img
+                              className="image-content"
+                              src={
+                                message.file.data.split("/")[1] !== "media"
+                                  ? `${message.file.data}`
+                                  : `${baseUrl}${message.file.data}`
+                              }
+                              alt="..."
+                            />
+                          </a>
+                          <p className="timestamp">{dataParseHM(timestamp)}</p>
+                        </div>
+                      </div>
+                    );
+                  } else if (message.file.type.startsWith("video")) {
+                    return (
+                      <div
+                        className={`user-message ${
+                          isCurrentUser ? "user-message" : "other-message"
+                        }`}
+                        key={index}
+                      >
+                        <div
+                          className={
+                            isCurrentUser
+                              ? "profil-user-right"
+                              : "profil-user-left"
+                          }
+                        >
+                          <img
+                            className={
+                              isCurrentUser
+                                ? "profil-content-right"
+                                : "profil-content-left"
+                            }
+                            src={`${baseUrl}${
+                              isCurrentUser
+                                ? user_connect.image_url
+                                : userDetMessage.image_url
+                            }`}
+                            alt="Profil-image"
+                          />
+                        </div>
+                        <div
+                          className={
+                            isCurrentUser
+                              ? "message-content-right"
+                              : "message-content-left"
+                          }
+                        >
+                          <b>{isCurrentUser ? "" : userDetMessage.username}</b>
+                          <p>{message.message}</p>
+                          <video
+                            className="video-content"
+                            src={
+                              message.file.data.split("/")[1] !== "media"
+                                ? `${message.file.data}`
+                                : `${baseUrl}${message.file.data}`
+                            }
+                            alt="..."
+                            controls
+                          />
+                          <p className="timestamp">{dataParseHM(timestamp)}</p>
+                        </div>
+                      </div>
+                    );
+                  } else if (message.file.type.startsWith("application")) {
+                    return (
+                      <div
+                        className={`user-message ${
+                          isCurrentUser ? "user-message" : "other-message"
+                        }`}
+                        key={index}
+                      >
+                        <div
+                          className={
+                            isCurrentUser
+                              ? "profil-user-right"
+                              : "profil-user-left"
+                          }
+                        >
+                          <img
+                            className={
+                              isCurrentUser
+                                ? "profil-content-right"
+                                : "profil-content-left"
+                            }
+                            src={`${baseUrl}${
+                              isCurrentUser
+                                ? user_connect.image_url
+                                : userDetMessage.image_url
+                            }`}
+                            alt="Profil-image"
+                          />
+                        </div>
+                        <div
+                          className={
+                            isCurrentUser
+                              ? "message-content-right"
+                              : "message-content-left"
+                          }
+                        >
+                          <b>{isCurrentUser ? "" : userDetMessage.username}</b>
+                          <p>{message.message}</p>
+                          <a
+                            className="link-content"
+                            href={`${baseUrl}${message.file.data}`}
+                            download={message.file.name}
+                          >
+                            {message.file.name}
+                          </a>
+                          <p className="timestamp">{dataParseHM(timestamp)}</p>
+                        </div>
+                      </div>
+                    );
+                  } else {
+                    return (
+                      <div
+                        className={`user-message ${
+                          isCurrentUser ? "user-message" : "other-message"
+                        }`}
+                        key={index}
+                      >
+                        <div className="message-content">
+                          <b>{isCurrentUser ? "" : userDetMessage.username}</b>
+                          <p>{message}</p>
+                          <p className="timestamp">{dataParseHM(timestamp)}</p>
+                          <audio src={`${baseUrl}${message.audio}`} controls />
+                        </div>
+                      </div>
+                    );
+                  }
+                } else {
+                  return (
+                    <div
+                      className={`user-message ${
+                        isCurrentUser ? "user-message" : "other-message"
+                      }`}
+                      key={index}
+                    >
+                      <div
+                        className={
+                          isCurrentUser
+                            ? "profil-user-right"
+                            : "profil-user-left"
+                        }
+                      >
+                        <img
+                          className={
+                            isCurrentUser
+                              ? "profil-content-right"
+                              : "profil-content-left"
+                          }
+                          src={`${baseUrl}${
+                            isCurrentUser
+                              ? user_connect?.image_url
+                              : userDetMessage?.image_url
+                          }`}
+                          alt="Profil-image"
+                        />
+                      </div>
+                      <div
+                        className={
+                          isCurrentUser
+                            ? "message-content-right"
+                            : "message-content-left"
+                        }
+                      >
+                        <b>{isCurrentUser ? "" : userDetMessage.username}</b>
+                        <p style={{ marginTop: "8px" }}>{message.message}</p>
+                        <p className="timestamp">{dataParseHM(timestamp)}</p>
+                      </div>
+                    </div>
+                  );
+                } */}

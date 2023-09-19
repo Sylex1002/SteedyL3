@@ -1,0 +1,106 @@
+.NavBarAdmin {
+    background-color: #fff;
+    color: #333;
+    height: 100vh;
+    border-right: 2px solid #bbcdd2;
+}
+
+.NavBarAdmin_dark {
+    height: 100vh;
+    border-right: 2px solid #bbcdd2;
+}
+
+.NavBarAdmin-header {
+    border-bottom: 2px solid #bbcdd2;
+    text-align: center;
+
+}
+
+.NavBarAdmin-header img {
+    text-align: center;
+    width: 5em;
+}
+
+.NavBarAdmin-body {
+    padding: 0px 10px;
+}
+
+.NavBarAdmin-theme h4 {
+    color: red;
+}
+
+.Nav_link h4 {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    color: #999;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.NavBarAdmin_ul li {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.NavBarAdmin-header a {
+    text-decoration: none;
+}
+
+.NavBarAdmin_ul_light li:hover {
+    background-color: #f8d2af;
+}
+
+.NavBarAdmin_ul_dark li:hover {
+    background-color: #f2f2f279;
+}
+
+.NavBarAdmin_ul li a {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.NavBarAdmin_ul_dark li a {
+    color: #f2f2f2;
+}
+
+.NavBarAdmin_ul_light li a {
+    color: #888;
+}
+
+.Icon_nav {
+    font-size: 18px;
+    color: #f49030;
+}
+
+.Icon_dark {
+    font-size: 18px;
+    color: #f2f2f2;
+}
+
+.NavBarAdmin-theme-content {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.colorOption {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #f49030;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.colorOption:nth-child(1) {
+    background-color: white;
+}
+
+.colorOption:nth-child(2) {
+    background-color: black;
+}
